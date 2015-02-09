@@ -3,6 +3,9 @@
 
 #bodyHeader{
 	height: 50px;
+header{
+	/* border:1px solid red; */
+	height: 100px;
 	width: 100%;
 	background-color: #44619D;
 	border-radius:0 0 8px 8px;
@@ -22,13 +25,23 @@ body{
 	margin:0 auto;
 }
 
+iframe{
+	border:none;
+}
+
+#contents-container {
+	height:100%;
+}
+
+#inputArea {
+	height: 68%;
+}
+
 #sidebar{
 	width:30%;
 	height:800px;
 	float:left;
 }
-
-
 
 #menu-top{
 	border: 1px solid #f3f3f3;
@@ -62,14 +75,13 @@ body{
 	
 }
 
-
 #boundary{
 	width:95%;
 }
 #content{
 	width: 95%;
 	margin :3px 1.3%;
-	height:50%;
+	height:83%;
 	resize:none;
 }
 
@@ -88,11 +100,16 @@ body{
 #latelyList{
 	margin:5px;
 }
+#latelyList a{
+	text-decoration: none;
+	color:inherit;
+}
 
 #latelyListTh{
 	font-size:bolder;
 	text-align: left;
 }
+
 #latelyListTh, .latelyListTd{
 	font-size:13px;
 }
