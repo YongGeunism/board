@@ -1,6 +1,5 @@
 package board.web.control.json;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.servlet.ServletContext;
@@ -13,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller("json.boardControl")
 @RequestMapping("/json/board")
+
+
 public class BoardControl {
   static final int PAGE_DEFAULT_SIZE = 3;
   
@@ -66,7 +67,7 @@ public class BoardControl {
   }
   
 	@RequestMapping(value="/add", method=RequestMethod.POST)
-	public Object addReserv(Reservation reservation) {
+	public Object addReserv(Board board) {
 
 		HashMap<String, Object> resultMap = new HashMap<String, Object>();
 		resultMap.put("status", "success");
