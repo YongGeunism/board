@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+html { 
+	font-family: "나눔고딕","NanumGothic","NanumGothicOTF", Apple Gothic, "맑은고딕", 
+							 "Malgun Gothic", dotum,"Arial", verdana, "Trebuchet MS", "Lucida Grande",
+							 "HelveticaNeue", "Tahoma","Helvetica", "hiragino kaku gothic pro", 
+							 sans-serif,"Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol",
+							 "Android Emoji","EmojiSymbols";
+							 
+	line-height: 1.42857143;
+	font-size: 1em;
+	color: #4e5665;
+  margin:0;
+}
