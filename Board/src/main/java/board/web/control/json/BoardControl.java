@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public class BoardControl {
   static final int PAGE_DEFAULT_SIZE = 3;
-  
   @Autowired ServletContext servletContext;
 
   @RequestMapping("/delete")
