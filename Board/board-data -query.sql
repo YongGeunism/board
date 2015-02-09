@@ -1,7 +1,7 @@
 --불러오기
 SELECT * FROM board;
 
---삽입하기
+--삽입하기 
 
 INSERT into
 
