@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel='stylesheet' href='css/common.css'>
+<link rel='stylesheet' href='css/bootstrap.min.css'>
+<link rel='stylesheet' href='css/bootstrap-theme.min.css'>
 <title>게시판</title>
 <style>
 	body {/* border : 1px solid black; */ height: 600px; width: 98%; margin: 0 auto;}
@@ -15,7 +17,7 @@
 	.tlist > a {text-decoration: none;color:inherit;}
 	
 	.tno{width:5%;}
-	.ttitle {width: 55%;}
+	.ttitle {width: 50%;}
 	.tcontent .tcont-detail { border : 1px solid pink; padding: 3%;}
 	.twriter {width:7%;}
 	.trec {width:8%;}
@@ -25,7 +27,7 @@
 </style>
 </head>
 <body>
- <table>
+ <table class="table table-hover">
  	<thead>
  	 <tr>
  	  <th class="thead tno">번호</th>

@@ -1,16 +1,15 @@
 package board.web.service;
 
-import board.web.domain.boardList;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+
+import board.web.domain.Board;
 
 /* Service 컴포넌트의 역할
  * => 비즈니스 로직 수행
@@ -87,15 +86,6 @@ public class BoardService {
 	  public void update(int boardNo) {
 	  }
   
-  public Board get(Integer boardNo) {
-	
-	
-    return Board;
-  }
-  
-  public String getBossPhoneNo(String businessNo){
-	  return boardDao.selectBossPhone(businessNo);
-  }
   
   /* @Transactional 선언
    * => 메서드 안의 입력/변경/삭제(manipluation) 작업을 하나의 작업을 묶는다.

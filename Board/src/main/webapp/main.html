@@ -4,39 +4,56 @@
 <meta charset="UTF-8">
 <link rel='stylesheet'  href='css/main.css'>
 <link rel='stylesheet' href='css/common.css'>
+<link rel='stylesheet' href='css/bootstrap.min.css'>
+<link rel='stylesheet' href='css/bootstrap-theme.min.css'>
 <title>게시판 만들기</title>
 </head>
+<style>
+	#menu-top table{
+	margin: 20px;
+	}
+	#menu-top table tbody th {
+	 width:40%;
+	}
+	#menu-top table tbody td {
+	 width:55%;
+	}
+</style>
 <body>
-<header>
-	<h1>헤더</h1>
-</header>
+<div id='bodyHeader'>
+	<h1 style="margin:0;">헤더</h1>
+</div>
+<div id=content-container>
 <div id='sidebar'>
 	<div id='menu-top'>
+	   <table>	
+		<tr id='divString'>
+			<th><h4 id='titleString'>제목</h4></th>
+			<td><input id='titleInput'/></td>
+		</tr>
+		<tr>
+			<th><h4 id='personString'>글쓴이</h4></th>
+			<td><input id='personInput'/></td>
+	    </tr>
+		<tr>
+			<th><h4 id='passString'>비밀번호</h4></th>
+			<td><input type="password" id='passInput'/></td>
+		</tr>
+	   </table>
 		
-		<div id='divString'>
-		<h4 id='titleString'>제목</h4>
-		<h4 id='personString'>글쓴이</h4>
-		<h4 id='passString'>비밀번호</h4>
+			<hr id='boundary'>
+		<div>
+			<h4>내용</h4>
+			<textarea id='content'></textarea>
+			<div id='buttonBar'>
+				<button type='submit' class='btn btn-success btn-lg' id='registerBtn'>등록</button >
+				<button type='reset'  class='btn btn-danger btn-lg'id='cancelBtn'>취소</button >
+			</div>
 		</div>
-		<div id='divInput'>
-		<input id='titleInput'/>
-		<input id='personInput'/><br>
-		<input id='passInput'/>
-		</div>
-		<hr id='boundary'>
-		<h4>내용</h4>
-		<textarea id='content'></textarea>
-		<div id='buttonBar'>
-		<button type='submit' id='registerBtn'>등록</button >
-		<button type='reset' id='cancelBtn'>취소</button >
-		</div>
-	</div>
+	</div><!-- menu-top end -->
 	<div id='menu-bottom'>
 		<h4>최근글보기</h4>
 		<table id="latelyList">
-			<tr>
-				<th id='latelyListTh'>제목</th>
-			</tr>
 			<tr>
 				<td class='latelyListTd'><a href="#">우헤헤헤헤헤헤헤헤헤헤헿헤헤헤</a></td>
 			</tr>
@@ -54,7 +71,7 @@
 	<h1>게시판 자리</h1>
 	<iframe id='bulletin' src="boardList.html"></iframe>
 </div>
-
+</div>
 <footer>
 	<h1>푸터자리</h1>
 </footer>

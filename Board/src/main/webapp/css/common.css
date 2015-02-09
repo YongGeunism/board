@@ -4,7 +4,7 @@ html {
 							 "Malgun Gothic", dotum,"Arial", verdana, "Trebuchet MS", "Lucida Grande",
 							 "HelveticaNeue", "Tahoma","Helvetica", "hiragino kaku gothic pro", 
 							 sans-serif,"Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol",
-							 "Android Emoji","EmojiSymbols";
+							 "Android Emoji","EmojiSymbols" !important;
 							 
 	line-height: 1.42857143;
 	font-size: 1em;
