@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:component-scan base-package="board.web">
+	<context:component-scan base-package="board.*">
 	  <context:exclude-filter type="regex" 
 	       expression="board.web.control.*"/>
 	</context:component-scan>
@@ -22,8 +22,8 @@
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/studydb?useUnicode=true&amp;characterEncoding=utf8" />
-		<property name="username" value="jiyg" />
+			value="jdbc:mysql://localhost:3306/Board?useUnicode=true&amp;characterEncoding=utf8" />
+		<property name="username" value="root" />
 		<property name="password" value="1111" />
 	</bean>
 

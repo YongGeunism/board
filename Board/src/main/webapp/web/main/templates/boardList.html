@@ -1,0 +1,18 @@
+<table class="table table-hover">
+<tr>
+  <th class="thead tno">번호</th>
+ 	  <th class="thead ttitle">제목</th>
+ 	  <th class="thead twriter">글쓴이</th>
+ 	  <th class="thead trec">추천수</th>
+ 	  <th class="thead tdate">날짜</th>
+</tr>
+{{#each boards}}
+<tr class="data-row">
+  <td>{{boardNo}}</td>
+  <td><a href="#" data-no="{{boardNo}}">{{boardTitle}}</a></td>
+  <td>{{boardWriter}}</td>
+  <td>{{boardRecommend}}</td>
+  <td>{{boardDate}}</td>
+</tr>
+{{/each}}
+</table>

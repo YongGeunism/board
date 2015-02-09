@@ -1,7 +1,6 @@
 package board.web.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Board implements Serializable {
 
@@ -14,7 +13,7 @@ public class Board implements Serializable {
 	protected String boardWriter;
 	protected String boardPasswd;
 	protected int boardRecommend;
-	protected Date boardDate;
+	protected String boardDate;
 	
 	@Override
 	public String toString() {
@@ -60,10 +59,10 @@ public class Board implements Serializable {
 	public void setBoardRecommend(int boardRecommend) {
 		this.boardRecommend = boardRecommend;
 	}
-	public Date getBoardDate() {
+	public String getBoardDate() {
 		return boardDate;
 	}
-	public void setBoardDate(Date boardDate) {
+	public void setBoardDate(String boardDate) {
 		this.boardDate = boardDate;
 	}
 	

@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+
+body { /* border : 1px solid black; */
+	height: 600px;
+	width: 98%;
+	margin: 0 auto;
+}
+
+body>table {
+	margin-top: 15px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table tr td {
+	
+}
+
+th {
+	border-bottom: 1px solid black;
+}
+
+.tlist {
+	text-align: center;
+}
+
+.tlist>a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.tno {
+	width: 5%;
+}
+
+.ttitle {
+	width: 50%;
+}
+
+.tcontent .tcont-detail {
+	border: 1px solid pink;
+	padding: 3%;
+}
+
+.twriter {
+	width: 7%;
+}
+
+.trec {
+	width: 8%;
+}
+
+.tdate {
+	width: 14%;
+}
+
+.hidden-cont {
+	display: none;
+}
+
+.deleteBtn, .updateBtn {
+	float: right;
+}

@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <link rel='stylesheet'  href='css/main.css'>
 <link rel='stylesheet' href='css/common.css'>
+<link rel='stylesheet' href='css/bootstrap.min.css'>
+<link rel='stylesheet' href='css/bootstrap-theme.min.css'>
 <title>게시판 만들기</title>
 </head>
 <style>
@@ -22,6 +24,7 @@
 	<h1 style="margin:0;">헤더</h1>
 </div>
 <div id='sidebar'>
+	<div id='menu-top'>
 	   <table>	
 		<tr id='divString'>
 			<th><h4 id='titleString'>제목</h4></th>
@@ -36,8 +39,9 @@
 			<td><input type="password" id='passInput'/></td>
 		</tr>
 	   </table>
-			<hr id='boundary'>
+		
 		<div>
+			<hr id='boundary'>
 			<h4>내용</h4>
 			<textarea id='content'></textarea>
 			<div id='buttonBar'>
@@ -48,17 +52,6 @@
 	</div><!-- menu-top end -->
 	<div id='menu-bottom'>
 		<h4>최근글보기</h4>
-		<table id="latelyList">
-			<tr>
-				<td class='latelyListTd'><a href="#">우헤헤헤헤헤헤헤헤헤헤헿헤헤헤</a></td>
-			</tr>
-			<tr>
-				<td class='latelyListTd'><a href="#">께랑께</a></td>
-			</tr>
-			<tr>
-				<td class='latelyListTd'><a href="#">키케코키케코키키키</a></td>
-			</tr>
-		</table>
 		<ul id="latelyList">
 			<li class='latelyListTd'>
 				<a href="#">우헤헤헤헤헤헤헤헤헤헤헿헤헤헤</a>
@@ -74,8 +67,7 @@
 </div>
 
 <div id='bulletin-container'>
-	<iframe id='bulletin' src="boardList.html"></iframe>
-</div>
+	<iframe id='bulletin' src="boardListForm.html"></iframe>
 </div>
 <footer>
 	<p>지용근 지용근</p>
