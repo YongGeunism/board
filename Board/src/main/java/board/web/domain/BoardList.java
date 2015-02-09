@@ -3,7 +3,7 @@ package board.web.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-public class boardList implements Serializable{
+public class BoardList implements Serializable{
 
 	
 	private static final long serialVersionUID = 1L;
@@ -12,7 +12,6 @@ public class boardList implements Serializable{
 	protected String boardTitle;
 	protected String boardContent;
 	protected String boardWriter;
-	protected String boardPasswd;
 	protected int boardRecommend;
 	protected Date boardDate;
 	
@@ -22,11 +21,9 @@ public class boardList implements Serializable{
 	public String toString() {
 		return "boardList [boardNo=" + boardNo + ", boardTitle=" + boardTitle
 				+ ", boardContent=" + boardContent + ", boardWriter="
-				+ boardWriter + ", boardPasswd=" + boardPasswd
-				+ ", boardRecommend=" + boardRecommend + ", boardDate="
-				+ boardDate + "]";
+				+ boardWriter + ", boardRecommend=" + boardRecommend
+				+ ", boardDate=" + boardDate + "]";
 	}
-	
 	public int getBoardNo() {
 		return boardNo;
 	}
@@ -51,12 +48,6 @@ public class boardList implements Serializable{
 	public void setBoardWriter(String boardWriter) {
 		this.boardWriter = boardWriter;
 	}
-	public String getBoardPasswd() {
-		return boardPasswd;
-	}
-	public void setBoardPasswd(String boardPasswd) {
-		this.boardPasswd = boardPasswd;
-	}
 	public int getBoardRecommend() {
 		return boardRecommend;
 	}
@@ -69,9 +60,6 @@ public class boardList implements Serializable{
 	public void setBoardDate(Date boardDate) {
 		this.boardDate = boardDate;
 	}
-	
-	
-	
 	
 	
 }

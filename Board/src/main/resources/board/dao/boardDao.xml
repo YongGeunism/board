@@ -9,84 +9,58 @@
 	 <resultMap type="Board" id="boardMap">
     	<!-- PK 컬럼은 id 태그를 사용하여 지정한다. -->
     	<id column="bno" property="boardNo"/>
-   		<result column="RCONTENT" property="reservationContent"/>
+   		<result column="bcontent" property="boardContent"/>
   	</resultMap>
   	
-  	 <resultMap type="reservationListItem" id="reservationListItemMap">
+  	 <resultMap type="boardList" id="boardListMap">
 	    <!-- PK 컬럼은 id 태그를 사용하여 지정한다. -->
-	    <id column="RNO" property="reservationNo"/>
-	    <result column="SNAME" property="shopName"/>
-	    <result column="UNAME" property="userName"/>
-	    <result column="UTYPE" property="userType"/>
-	    <result column="RDATE" property="reservationDate"/>
-	    <result column="RSTATUS" property="reservationStatus"/>
+	    <id column="bno" property="boardNo"/>
+	    <result column="btitle" property="boardTitle"/>
+	    <result column="bcontent" property="boardContent"/>
+	    <result column="bwriter" property="boardWriter"/>
+	    <result column="bpass" property="boardPasswd"/>
+	    <result column="recom" property="boardRecommend"/>
+	    <result column="bdate" property="boardDate"/>
+	    
     </resultMap>
     
-  <select id="selectList" parameterType="map" resultMap="reservationListItemMap">
+  <select id="selectList" parameterType="map" resultMap="boardListMap">
 		SELECT 
-			r.RNO,
-			s.SNAME,
-			u.UNAME,
-			u.UTYPE,
-			r.RDATE,
-			r.RSTATUS
-			FROM RESERVATION r,SHOP s, USER u
-			WHERE r.BBNO = s.BBNO  AND r.UID=u.UID
-			<choose>
-				<when test="uId !=null">
-					AND	u.UID=#{uId}
-				</when>
-				<when test="businessNo !=null">
-					AND s.BBNO=#{businessNo}
-				</when>
-			</choose>
-			<if test="date !=null">
-				AND RDATE LIKE #{date}
-			</if>
-		ORDER BY RDATE DESC
+			bno,
+			btitle,
+			bcontent,
+			bwriter,
+			bpass,
+			recom,
+			bdate
+			FROM board
+		ORDER BY bdate DESC
    <if test="pageSize > 0">
       limit #{startIndex}, #{pageSize}
     </if>  
   </select>
   
-	  <select id="selectOne" parameterType="Integer" resultMap="reservationMap">
-	  	  SELECT RCONTENT FROM RESERVATION WHERE RNO=#{value}
+	  <select id="selectOne" parameterType="Integer" resultMap="boardMap">
+	  	  SELECT bcontent FROM board WHERE bno=#{value}
 	  </select>
   
 	<select id="totalSize" parameterType="map" resultType="int">
-	   	 SELECT count(RNO) FROM RESERVATION
-	   	 <where>
-		   	 <if test="uId !=null">
-		   	 	UID=#{uId}
-		   	 </if>
-		   	 <if test="businessNo !=null">
-		   	 	BBNO=#{businessNo}
-		   	 </if>
-		   	 <if test="date != null">
-		   	 	AND RDATE LIKE #{date}
-		   	 </if>
-	   	 </where>
+	   	 SELECT count(bno) FROM board
+	   	
 	  </select>
 	  
-	  <insert id="insert" parameterType="Reservation"
-	   	  useGeneratedKeys="true" keyColumn="RNO" keyProperty="reservationNo">
-	   	  INSERT INTO RESERVATION(BBNO, RDATE, RCONTENT, UID, RSTATUS) 
-	   	  VALUES(#{businessNo}, #{reservationDate}, #{reservationContent}, #{userId} ,#{reservationStatus})
+	  <insert id="insert" parameterType="Board"
+	   	  useGeneratedKeys="true" keyColumn="bno" keyProperty="boardNo">
+	   	  INSERT INTO RESERVATION(btitle,bcontent,bwriter,bpass,bdate) 
+	   	  VALUES(#{},#{},#{},#{},#{})
 	  </insert> 
   
    	  <delete id="delete" parameterType="int">
-         DELETE FROM RESERVATION WHERE RNO=#{value}
+         DELETE FROM board WHERE bno=#{value}
   	  </delete>
   	  
   	  <update id="update" parameterType="int">
-		UPDATE RESERVATION set RSTATUS="승인" WHERE RNO=#{value} 	  	
+		UPDATE board set btitle=#{}, bcontent=#{} 
+		WHERE bno=#{value} 	  	
   	  </update>
-  	  
-  	  <select id="selectBossPhone" parameterType="String" resultType="String">
-		SELECT UPHONE FROM USER, SHOP 
-		WHERE USER.UID = SHOP.UID 
-		AND BBNO = #{businessNo};
-	  </select>
-
-	
 </mapper>

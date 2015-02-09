@@ -90,7 +90,7 @@ public class BoardService {
   public Board get(Integer boardNo) {
 	
 	
-    return board;
+    return Board;
   }
   
   public String getBossPhoneNo(String businessNo){
