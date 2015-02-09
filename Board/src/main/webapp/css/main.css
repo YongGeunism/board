@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+
+
+header{
+	border:1px solid red;
+	height: 100px;
+	width: 100%;
+	
+}
+
+body{
+	border:1px solid green;
+	height:100%;
+	width:80%;
+	margin:30px auto;
+}
+
+#sidebar{
+	border: 1px solid blue;
+	width:30%;
+	height:800px;
+	float:left;
+}
+
+
+
+#menu-top{
+	border:1px solid green; 
+	width: 100%;
+	height:65%;
+}
+
+#titleString{
+	display: inline-block;
+}
+
+#titleInput{
+	display: inline-block;
+	width:100%;
+	margin:6px auto;
+}
+
+#divString{
+	margin:5px;
+	display:inline-block;
+}
+#divInput{
+	width: 70%;
+	display:inline-block;
+}
+
+#personString,#passString, 
+#passInput, #personInput,
+#titleString ,#titleInput
+{
+	margin:5px;
+	
+}
+
+
+#boundary{
+	width:95%;
+}
+#content{
+	width: 95%;
+	margin :3px 1.3%;
+	height:50%;
+	resize:none;
+}
+
+#buttonBar{
+	text-align: center;
+}
+#buttonBar button{
+	width: 50px;	
+}
+/*menu-bottom*/
+#menu-bottom{
+	border:1px solid pink;
+	height: 35%;
+}
+
+#latelyList{
+	margin:5px;
+}
+
+#latelyListTh{
+	font-size:bolder;
+	text-align: left;
+}
+#latelyListTh, .latelyListTd{
+	font-size:13px;
+}
+
+/* 게시판리스트 */
+
+#bulletin-container{
+	border:1px solid black;
+	height: 800px;
+	width: 69%;
+	float:right;
+}
+
+#bulletin{
+	width:99%;
+	height: 80%;
+	margin-left: 0.5%;
+	/* border :none; */
+	
+}
+/* 게시판리스 */
+footer{
+	border:1px solid navy;
+	height: 100px;
+	width: 100%;
+	float:right;
+}
