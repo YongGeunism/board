@@ -2,7 +2,7 @@
 
 
 header{
-	border:1px solid red;
+	/* border:1px solid red; */
 	height: 100px;
 	width: 100%;
 	
@@ -15,14 +15,20 @@ body{
 	margin:30px auto;
 }
 
+iframe{
+	border:none;
+}
+
+#contents-container {
+	height:100%;
+}
+
 #sidebar{
 	border: 1px solid blue;
 	width:30%;
 	height:800px;
 	float:left;
 }
-
-
 
 #menu-top{
 	border:1px solid green; 
@@ -83,11 +89,16 @@ body{
 #latelyList{
 	margin:5px;
 }
+#latelyList li{
+	text-decoration: none;
+	color:inherit;
+}
 
 #latelyListTh{
 	font-size:bolder;
 	text-align: left;
 }
+
 #latelyListTh, .latelyListTd{
 	font-size:13px;
 }
