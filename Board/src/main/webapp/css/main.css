@@ -23,6 +23,10 @@ iframe{
 	height:100%;
 }
 
+#inputArea {
+	height: 68%;
+}
+
 #sidebar{
 	border: 1px solid blue;
 	width:30%;
@@ -63,14 +67,13 @@ iframe{
 	
 }
 
-
 #boundary{
 	width:95%;
 }
 #content{
 	width: 95%;
 	margin :3px 1.3%;
-	height:50%;
+	height:83%;
 	resize:none;
 }
 
@@ -89,7 +92,7 @@ iframe{
 #latelyList{
 	margin:5px;
 }
-#latelyList li{
+#latelyList a{
 	text-decoration: none;
 	color:inherit;
 }
